@@ -1,0 +1,15 @@
+000 01 3FD xx yyy	#LOAD M(x) - Le o primeiro endereço
+					#STOR M( ) - poe o endereço na instrução de carregar em MQ
+001 01 3FE zz www	#LOAD M(x) - le o segundo endereço 
+					#STOR M( ) - poe o segundo endereço na instrução de multiplicar
+002 09 000 0B 000	#LOAD MQ,M(x) - Carrega primeiro valor do vetor em MQ
+					#MUL MQ * M(x) - Multiplica os dois valores 
+003 05 rrr 21 sss	#ADD AC + M(x) - Soma com o valor anterior de somatório, inicialmente 0
+					#STOR M(x) - salva o somatório
+004 #carrega endereço 1
+					#endereço 1++
+005
+
+ 00 00 00 00 01 #constante 1
+ 00 00 00 00 01 #contador
+ 00 00 00 00 00 #somatório

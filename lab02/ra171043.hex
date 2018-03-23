@@ -1,0 +1,23 @@
+000 09 105 #LOAD MQ, M(X) - pega o valor de x da memória 
+
+001 0b 104 #MUL MQ * M(x) - multiplica x e g 
+
+002 0a 000 #LOAD MQ - joga MQ pra AC 
+
+#raiz quadrada
+003 15 000 #RSH - desloca todos os bits de AC bits um espaço pra direita(divide por 2)
+
+004 21 103 #STOR M(x) - salva AC em espaço temporário(103) 
+
+005 0c 103 #DIV AC / M(x) - divide y por k
+
+006 0a 000 #LOAD MQ - passa MQ pra AC
+
+007 05 103 #ADD AC + M(x) - soma AC à k(valor temporário)
+
+008 15 000 #RSH - desloca bits de AC pra direita
+
+
+
+103 #valor temporario
+104 00 00 00 00 0a #guarda g
